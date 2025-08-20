@@ -7,11 +7,8 @@ mkdir -p /home/ubuntu/workspace
 
 # Clone our repository first to get the necessary scripts
 echo "=== Cloning setup scripts ==="
-git clone https://github.com/pavel4ai/video-wan2.1-docker.git /home/ubuntu/workspace/temp
-cp /home/ubuntu/workspace/temp/wan2.1-t2v-14B-portable/setup_environment.sh /home/ubuntu/
-cp /home/ubuntu/workspace/temp/wan2.1-t2v-14B-portable/download_model.sh /home/ubuntu/
-cp /home/ubuntu/workspace/temp/wan2.1-t2v-14B-portable/start_server.sh /home/ubuntu/
-rm -rf /home/ubuntu/workspace/temp
+curl -O https://raw.githubusercontent.com/Cragsworth/Wan2.1Docker/refs/heads/main/download_model.sh
+curl -O https://raw.githubusercontent.com/Cragsworth/Wan2.1Docker/refs/heads/main/start_server.sh
 
 # Create virtual environment in workspace
 python -m venv /home/ubuntu/workspace/venv
